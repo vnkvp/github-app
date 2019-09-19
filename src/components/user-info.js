@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 
 const UserInfo = ({ userinfo }) => (
     <div className="user-info">
-        <img src={userinfo.photo} />
-        <h1 className="username">
-            <a href={`https://github.com/${userinfo.login}`}>
+        <img src={userinfo.photo} className="picture"/>
+        <h1>
+            <a href={`https://github.com/${userinfo.login}`} className="username">
                 {userinfo.username}
             </a>
         </h1>
