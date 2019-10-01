@@ -25,10 +25,11 @@ class App extends Component {
                     this.setState({
                         [type]: result.map((repo) => ({
                             name: repo.name,
-                            link: repo.html_url
+                            link: repo.html_url,
+                            description: repo.description,
+                            language: repo.language
                         }))
                     })
-                    console.log(result)
                 })
         }
     }
@@ -70,10 +71,7 @@ class App extends Component {
 
         return (
             <AppContent
-                userinfo={this.state.userinfo}
-                repos={this.state.repos}
-                starred={this.state.starred}
-                isFetching={this.state.isFetching}
+                {...this.state}
                 handleSearch={(e) => this.handleSearch(e)}
                 seeRepo={this.actions('repos')}
                 seeStar={this.actions('starred')}

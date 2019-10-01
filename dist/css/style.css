@@ -11,7 +11,7 @@
     margin: 20px 10px;
 }
 .username {
-    font-size: 2rem;
+    font-size: 24px;
     font-weight: 600;
     text-decoration: none;
     color: #24292e;
@@ -19,8 +19,8 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 16px;
+    justify-content: space-around;
+    padding: 2px 15px;
     border-bottom: 1px solid #24292e;
 }
 .links {
@@ -31,17 +31,13 @@
     margin-left: 15px;
 }
 .search-bar {
-    width: 30vw;
+    width: 75vw;
     height: 2rem;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #24292e;
     background: #24292e;
     color: #fff;
-}
-.usercontent {
-    float: left;
-    display: block;
 }
 .picture {
     border: 1px solid #24292e;
@@ -52,17 +48,82 @@
 }
 .actions {
     margin-left: 10px;
-    padding: 10px;
-    background: #24292e;
-    color: #FFF;
+    color: #24292e;
     font-weight: 600;
-    border-radius: 5px;
-    border: 1px solid #24292e;
-}
-.logo {
-    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
 }
 .grid {
     display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.description {
+    padding: 10px;
+}
+.list {
+    list-style: none;
+}
+.title, .login, .language {
+    font-weight: 100;
+}
+.login {
+    font-size: 18px;
+}
+.repo-info {
+    list-style: none;
+}
+.repos,
+.starred {
+    padding: 20px;
+}
+.grid2 {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+.repo, .star {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media (max-width: 1070px) {
+    .user-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .search-bar {
+        width: 33vw;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .usercontent {
+        margin: 0 auto;
+    }
+    .picture {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (max-width: 500px) {
+    .user-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .pic {
+        margin: 0 auto;
+    }
+    .picture {
+        max-width: 250px;
+        max-height: 250px;
+        border-radius: 50%;
+    }
+    .actions {
+        margin-left: 0;
+        font-size: 12px;
+    }
 }

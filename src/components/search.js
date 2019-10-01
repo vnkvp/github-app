@@ -1,6 +1,7 @@
 'use strict'
 
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Search = ({ handleSearch }) => (
     <div className="search">
@@ -11,5 +12,9 @@ const Search = ({ handleSearch }) => (
         />
     </div>
 )
+
+Search.propTypes = {
+    handleSearch: PropTypes.func
+}
 
 export default Search

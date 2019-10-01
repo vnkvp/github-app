@@ -5,15 +5,23 @@ import PropTypes from 'prop-types'
 
 const Repos = ({ className, title, repos }) => (
     <div className={className}>
-        <h4>{title}</h4>
+        <h4 className="title">{title}</h4>
         <ul>
-            {repos.map((repo, index) => (
-                <li key={index}>
-                    <a href={repo.link}>
-                        {repo.name}
-                    </a>
-                </li>
-            ))}
+            <div className="grid2">
+                {repos.map((repo, index) => (
+                    <div className="repo" key={index}>
+                        <li className="list">
+                            <a href={repo.link} className="links">
+                                {repo.name}
+                            </a>
+                        </li>
+                        <div className="description">
+                            <p >{repo.description}</p>
+                            <p className="language">{repo.language}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </ul>
     </div>
 )
